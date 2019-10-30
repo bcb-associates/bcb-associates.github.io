@@ -26,6 +26,10 @@ body {
       flex-grow: 1;
     }
   }
+  .sticky {
+    position: sticky;
+    top: 0;
+  }
 
   .navbar {
     background: rgb(127, 91, 192);
@@ -59,4 +63,8 @@ body {
       }
     }
   }
+}
+.text-dummy {
+  text-align: center;
+  scrollbar-width: 0.5px;
 }

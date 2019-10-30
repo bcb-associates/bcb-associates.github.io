@@ -37,6 +37,12 @@ body .logo-container .navbar-slogan {
           flex-grow: 1;
 }
 
+body .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 body .navbar {
   background: #7f5bc0;
   height: 5vh;
@@ -76,5 +82,10 @@ body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
   color: #eeae60;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
+}
+
+.text-dummy {
+  text-align: center;
+  scrollbar-width: 0.5px;
 }
 /*# sourceMappingURL=style.css.map */
