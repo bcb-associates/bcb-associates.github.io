@@ -76,13 +76,39 @@ body .navbar .navitems .navitem-list .nav-item .nav-link {
 }
 
 body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
-  color: #eeae60;
+  color: rgba(116, 69, 16, 0.897);
   -webkit-transition: 0.3s color ease-in-out;
   transition: 0.3s color ease-in-out;
 }
 
-.text-dummy {
-  text-align: center;
-  scrollbar-width: 0.5px;
+.line {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.burgerdiv {
+  width: 45px;
+}
+
+.burgerdiv:hover {
+  background-color: black;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.burgerdiv:hover .line {
+  background-color: white;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.footer hr {
+  width: 100vw;
 }
 /*# sourceMappingURL=style.css.map */
