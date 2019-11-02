@@ -76,7 +76,7 @@ body .navbar .navitems .navitem-list .nav-item .nav-link {
 }
 
 body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
-  color: rgba(116, 69, 16, 0.897);
+  color: #087394;
   -webkit-transition: 0.3s color ease-in-out;
   transition: 0.3s color ease-in-out;
 }
