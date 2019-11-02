@@ -6,7 +6,7 @@
 }
 
 body {
-  background: rgba(255, 33, 33, 0.664);
+  background: rgba(70, 171, 202, 0.479);
 }
 
 body .logo-container {
@@ -44,7 +44,7 @@ body .sticky {
 }
 
 body .navbar {
-  background: #7f5bc0;
+  background: rgba(129, 88, 204, 0.932);
   height: 5vh;
   width: 100vw;
   display: -webkit-box;
@@ -55,10 +55,6 @@ body .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
 }
 
 body .navbar .navitems .navitem-list {
@@ -76,12 +72,13 @@ body .navbar .navitems .navitem-list .nav-item .nav-link {
   font-size: 1.2rem;
   text-decoration: none;
   color: bisque;
+  padding: 0.3rem;
 }
 
 body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
   color: #eeae60;
-  -webkit-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.3s color ease-in-out;
+  transition: 0.3s color ease-in-out;
 }
 
 .text-dummy {

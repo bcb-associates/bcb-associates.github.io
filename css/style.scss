@@ -4,7 +4,7 @@
   padding: 0;
 }
 body {
-  background: rgba(255, 33, 33, 0.664);
+  background: rgba(70, 171, 202, 0.479);
 
   .logo-container {
     display: flex;
@@ -32,14 +32,13 @@ body {
   }
 
   .navbar {
-    background: rgb(127, 91, 192);
+    background: rgba(129, 88, 204, 0.932);
     height: 5vh;
     width: 100vw;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    flex-direction: row-reverse;
-    //justify-content: space-evenly;
+    // flex-direction: row-reverse;
 
     .navitems {
       .navitem-list {
@@ -53,11 +52,12 @@ body {
             font-size: 1.2rem;
             text-decoration: none;
             color: bisque;
+            padding: 0.3rem;
           }
 
           .nav-link:hover {
             color: rgb(238, 174, 96);
-            transition: 0.3s all ease-in-out;
+            transition: 0.3s color ease-in-out;
           }
         }
       }
