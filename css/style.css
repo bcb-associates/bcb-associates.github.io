@@ -44,6 +44,8 @@ body .sticky {
 }
 
 body .navbar {
+  overflow: hidden;
+  position: relative;
   background: rgba(129, 88, 204, 0.932);
   height: 5vh;
   width: 100vw;
@@ -66,6 +68,8 @@ body .navbar .navitems .navitem-list {
 
 body .navbar .navitems .navitem-list .nav-item {
   padding: 0.3rem;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 body .navbar .navitems .navitem-list .nav-item .nav-link {
@@ -80,6 +84,10 @@ body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
   font-size: 200%;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
+}
+
+.hidden {
+  display: none;
 }
 
 .line {
@@ -111,5 +119,7 @@ body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
 
 .footer hr {
   width: 100vw;
+  height: 5px;
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
