@@ -57,7 +57,8 @@ body {
 
           .nav-link:hover {
             color: rgb(8, 115, 148);
-            transition: 0.3s color ease-in-out;
+            font-size: 200%;
+            transition: 0.3s all ease-in-out;
           }
         }
       }
