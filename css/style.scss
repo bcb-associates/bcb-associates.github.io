@@ -67,6 +67,29 @@ body {
       }
     }
   }
+  .mainBody{
+    background-color: #ff0066;
+    font-size: 2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justified;
+    .imgRt{
+      right: 0px;
+      top: 0px;
+
+      #rt1{}
+      #rt2{}
+      #rt3{}
+    }
+    .imgLt{
+      left: 0px;
+      top: 0px;
+
+      #lt1{}
+      #lt2{}
+      #lt3{}
+    }
+  }
 }
 .hidden {
   display: none;
@@ -92,6 +115,11 @@ body {
 .footer {
   position: fixed;
   bottom: 0;
+  background-color: #da801afa;
+  color: rgb(53, 56, 236);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 
   hr {
     width: 100vw;

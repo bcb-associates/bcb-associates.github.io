@@ -86,6 +86,24 @@ body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
   transition: 0.3s all ease-in-out;
 }
 
+body .mainBody {
+  background-color: #ff0066;
+  font-size: 2rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: justified;
+}
+
+body .mainBody .imgRt {
+  right: 0px;
+  top: 0px;
+}
+
+body .mainBody .imgLt {
+  left: 0px;
+  top: 0px;
+}
+
 .hidden {
   display: none;
 }
@@ -115,6 +133,11 @@ body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
 .footer {
   position: fixed;
   bottom: 0;
+  background-color: #da801afa;
+  color: #3538ec;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .footer hr {
