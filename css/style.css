@@ -4,8 +4,46 @@
 }
 
 body {
-  font-size: 1.125rem;
-  background: silver;
+  font-size: 1.5rem;
+  background: #ff1aff;
+}
+
+body .bannerContainer {
+  background: white;
+}
+
+body .banner {
+  padding-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #slogan {
+  font-family: "Pinyon Script", cursive;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 600px;
+  font-size: 3rem;
+}
+
+body h1 {
+  font-family: "Abril Fatface", cursive;
+  padding-left: 100px;
+  font-size: 7rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  letter-spacing: 15px;
+}
+
+body .activeTab {
+  background: #b32400;
+}
+
+body .activeTab a {
+  color: #eaece4;
 }
 
 body nav ul {
@@ -19,16 +57,26 @@ body nav ul {
       justify-content: space-around;
 }
 
+body nav li {
+  border: 1px solid black;
+}
+
+body nav li:hover,
+body nav li:focus {
+  background: #b32400;
+}
+
+body nav li:hover a,
+body nav li:focus a {
+  color: #eaece4;
+  text-decoration: underline;
+}
+
 body nav a {
   display: inline-block;
   padding: 0.5em;
   text-decoration: none;
   color: navy;
-}
-
-body nav a:hover, body nav a:focus {
-  color: #751d1d;
-  text-decoration: underline;
 }
 
 body img {
@@ -37,12 +85,12 @@ body img {
 }
 
 body footer {
-  width: 100%;
+  width: 100vw;
   font-size: 1.5rem;
   text-align: center;
   bottom: 0;
   position: fixed;
-  background: #25066d;
+  background: #2e478b;
   color: whitesmoke;
 }
 /*# sourceMappingURL=style.css.map */
