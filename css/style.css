@@ -1,15 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-size: 1.5rem;
   background: #ff1aff;
 }
 
+body li {
+  list-style-position: inside;
+}
+
+body p {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+body .accent {
+  background: #c6ff1a;
+}
+
 body .bannerContainer {
-  background: white;
+  background: #d1ce0e;
 }
 
 body .banner {
@@ -31,7 +39,7 @@ body #slogan {
 body h1 {
   font-family: "Abril Fatface", cursive;
   padding-left: 100px;
-  font-size: 7rem;
+  font-size: 6rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 70%;
           flex: 0 0 70%;
