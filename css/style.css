@@ -6,7 +6,7 @@
 }
 
 body {
-  background: rgba(70, 171, 202, 0.479);
+  background: #f1e7b6;
 }
 
 body .logo-container {
@@ -87,7 +87,7 @@ body .navbar .navitems .navitem-list .nav-item .nav-link:hover {
 }
 
 body .mainBody {
-  background-color: #ff0066;
+  background-color: #ecdd8f;
   font-size: 2rem;
   margin-left: 20%;
   margin-right: 20%;
