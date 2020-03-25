@@ -28,6 +28,9 @@ body .bannerContainer .banner {
 
 body .bannerContainer .banner .logo {
   max-height: 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .bannerContainer .banner h1 {
@@ -51,7 +54,7 @@ body .bannerContainer #slogan {
 }
 
 body nav {
-  padding-bottom: 5px 0;
+  padding: 5px 0;
 }
 
 body nav ul {
@@ -59,12 +62,14 @@ body nav ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 body nav li {
   border: 1px solid black;
+  margin: 0 10px;
 }
 
 body nav li:hover,
@@ -95,9 +100,8 @@ body ol {
   padding-right: 10%;
 }
 
-body p {
-  padding-left: 10%;
-  padding-right: 10%;
+body main {
+  padding: 0 15%;
 }
 
 body .activeTab {

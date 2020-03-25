@@ -20,6 +20,8 @@ body {
       display: flex;
       .logo {
         max-height: 150px;
+        align-items: center;
+        //justify-content: center;
       }
       h1 {
         text-align: center;
@@ -40,14 +42,15 @@ body {
   }
 
   nav {
-    padding-bottom: 5px 0;
+    padding: 5px 0;
     ul {
       display: flex;
       list-style: none;
-      justify-content: space-around;
+      justify-content: flex-end;
     }
     li {
       border: 1px solid black;
+      margin: 0 10px;
     }
     li:hover,
     nav li:focus {
@@ -74,9 +77,8 @@ body {
     padding-right: 10%;
   }
 
-  p {
-    padding-left: 10%;
-    padding-right: 10%;
+  main {
+    padding: 0 15%;
   }
 
   .activeTab {
