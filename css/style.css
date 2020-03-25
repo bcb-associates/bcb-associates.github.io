@@ -1,3 +1,10 @@
+/*variables*/
+:root {
+  --primary-color: #d9d9d9;
+  --accent-color: #00a54f;
+  --dark-color: #6e2c91;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,49 +12,26 @@
 
 body {
   font-size: 1.5rem;
-  background: #ff1aff;
-}
-
-body li {
-  list-style-position: inside;
-}
-
-body ul,
-body ol {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-body p {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-body .accent {
-  background: #c6ff1a;
+  background: var(--primary-color);
 }
 
 body .bannerContainer {
-  background: #d1ce0e;
+  background: var(--dark-color);
 }
 
-body .banner {
+body .bannerContainer .banner {
   padding-left: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body #slogan {
-  font-family: "Pinyon Script", cursive;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-left: 600px;
-  font-size: 3rem;
+body .bannerContainer .banner .logo {
+  max-height: 150px;
 }
 
-body h1 {
+body .bannerContainer .banner h1 {
+  text-align: center;
   font-family: "Abril Fatface", cursive;
   padding-left: 100px;
   font-size: 6rem;
@@ -57,12 +41,13 @@ body h1 {
   letter-spacing: 15px;
 }
 
-body .activeTab {
-  background: #b32400;
-}
-
-body .activeTab a {
-  color: #eaece4;
+body .bannerContainer #slogan {
+  font-family: "Pinyon Script", cursive;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 600px;
+  font-size: 3rem;
 }
 
 body nav {
@@ -83,13 +68,13 @@ body nav li {
 }
 
 body nav li:hover,
-body nav li:focus {
-  background: #b32400;
+body nav nav li:focus {
+  background: var(--accent-color);
 }
 
 body nav li:hover a,
-body nav li:focus a {
-  color: #eaece4;
+body nav nav li:focus a {
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
@@ -97,7 +82,30 @@ body nav a {
   display: inline-block;
   padding: 0.5em;
   text-decoration: none;
-  color: navy;
+  color: var(--dark-color);
+}
+
+body li {
+  list-style-position: inside;
+}
+
+body ul,
+body ol {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+body p {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+body .activeTab {
+  background: var(--accent-color);
+}
+
+body .activeTab a {
+  color: var(--primary-color);
 }
 
 body img {
@@ -111,7 +119,7 @@ body footer {
   text-align: center;
   bottom: 0;
   position: fixed;
-  background: #2e478b;
-  color: whitesmoke;
+  background: var(--dark-color);
+  color: var(--primary-color);
 }
 /*# sourceMappingURL=style.css.map */
