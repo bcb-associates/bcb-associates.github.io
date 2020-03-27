@@ -31,9 +31,10 @@ body .bannerContainer .banner .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100%;
 }
 
-body .bannerContainer .banner h1 {
+body .bannerContainer .banner .compName {
   text-align: center;
   font-family: "Abril Fatface", cursive;
   padding-left: 100px;
@@ -106,7 +107,10 @@ body ol {
 }
 
 body main {
-  padding: 0 15%;
+  padding: 0 20%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 body main p {
@@ -131,8 +135,53 @@ body footer {
   font-size: 1.5rem;
   text-align: center;
   bottom: 0;
-  position: fixed;
   background: var(--dark-color);
   color: var(--primary-color);
+}
+
+@media (min-width: 705px) {
+  footer {
+    position: fixed;
+  }
+}
+
+@media (max-width: 700px) {
+  * {
+    font-size: 1rem;
+  }
+  p {
+    line-height: -0.1em;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  .bannerContainer .banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bannerContainer .banner .compName {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    font-size: 2rem !important;
+    font-family: sans-serif;
+    padding: 0;
+  }
+  .bannerContainer .banner .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .bannerContainer .banner .slogan {
+    font-size: 1rem !important;
+    font-family: cursive;
+    text-align: right;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -21,9 +21,10 @@ body {
       .logo {
         max-height: 150px;
         align-items: center;
+        max-width: 100%;
         //justify-content: center;
       }
-      h1 {
+      .compName {
         text-align: center;
         font-family: "Abril Fatface", cursive;
         padding-left: 100px;
@@ -83,7 +84,9 @@ body {
   }
 
   main {
-    padding: 0 15%;
+    padding: 0 20%;
+    display: grid;
+    place-items: center;
     p {
       line-height: 1.6em;
     }
@@ -105,8 +108,46 @@ body {
     font-size: 1.5rem;
     text-align: center;
     bottom: 0;
-    position: fixed;
+    //position: fixed;
     background: var(--dark-color);
     color: var(--primary-color);
+  }
+}
+@media (min-width: 705px) {
+  footer {
+    position: fixed;
+  }
+}
+@media (max-width: 700px) {
+  * {
+    font-size: 1rem;
+  }
+  p {
+    line-height: -0.1em;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  .bannerContainer {
+    .banner {
+      display: flex;
+      flex-direction: column;
+
+      .compName {
+        flex: 0 0 50%;
+        font-size: 2rem !important;
+        font-family: sans-serif;
+        padding: 0;
+      }
+      .logo {
+        flex: 0 0 50%;
+      }
+      .slogan {
+        font-size: 1rem !important;
+        font-family: cursive;
+        text-align: right;
+        padding: 0;
+      }
+    }
   }
 }
