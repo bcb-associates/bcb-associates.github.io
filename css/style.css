@@ -42,6 +42,7 @@ body .bannerContainer .banner h1 {
       -ms-flex: 0 0 70%;
           flex: 0 0 70%;
   letter-spacing: 15px;
+  line-height: -0.3em;
 }
 
 body .bannerContainer #slogan {
@@ -51,6 +52,7 @@ body .bannerContainer #slogan {
       align-self: center;
   padding-left: 600px;
   font-size: 3rem;
+  line-height: -0.3em;
 }
 
 body nav {
@@ -73,12 +75,12 @@ body nav li {
 }
 
 body nav li:hover,
-body nav nav li:focus {
+body nav li:focus {
   background: var(--accent-color);
 }
 
 body nav li:hover a,
-body nav nav li:focus a {
+body nav li:focus a {
   color: var(--primary-color);
   text-decoration: underline;
 }
@@ -88,6 +90,9 @@ body nav a {
   padding: 0.5em;
   text-decoration: none;
   color: var(--dark-color);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 body li {
@@ -102,6 +107,10 @@ body ol {
 
 body main {
   padding: 0 15%;
+}
+
+body main p {
+  line-height: 1.6em;
 }
 
 body .activeTab {
