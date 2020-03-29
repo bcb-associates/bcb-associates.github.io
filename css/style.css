@@ -5,9 +5,13 @@
   --dark-color: #6e2c91;
 }
 
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -15,38 +19,37 @@ body {
   background: var(--primary-color);
 }
 
-body .bannerContainer {
+body .banner-container {
   background: var(--dark-color);
 }
 
-body .bannerContainer .banner {
+body .banner-container .banner {
   padding-left: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .bannerContainer .banner .logo {
-  max-height: 150px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body .banner-container .banner .img-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
-body .bannerContainer .banner h1 {
+body .banner-container .banner .compName {
   text-align: center;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface", "times new roman";
   padding-left: 100px;
-  font-size: 6rem;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 70%;
-          flex: 0 0 70%;
+  font-size: 64px;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 auto;
+          flex: 3 3 auto;
   letter-spacing: 15px;
   line-height: -0.3em;
 }
 
-body .bannerContainer #slogan {
-  font-family: "Pinyon Script", cursive;
+body .banner-container .slogan {
+  font-family: "Pinyon Script", "times new roman";
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -99,14 +102,11 @@ body li {
   list-style-position: inside;
 }
 
-body ul,
-body ol {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
 body main {
-  padding: 0 15%;
+  padding: 0 20%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 body main p {
@@ -134,5 +134,88 @@ body footer {
   position: fixed;
   background: var(--dark-color);
   color: var(--primary-color);
+}
+
+@media (max-width: 850px) {
+  body {
+    font-size: 1rem;
+  }
+  body .banner-container .banner {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .banner-container .banner .compName {
+    text-align: left;
+    padding: 0;
+    font-size: 2rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    letter-spacing: 0;
+    line-height: auto;
+  }
+  body .banner-container .slogan {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 5px;
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: auto;
+    font-weight: 800;
+  }
+  body nav {
+    padding: 5px 0;
+  }
+  body nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body nav li {
+    border: 1px solid black;
+    margin: 0 10px;
+  }
+  body nav a {
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  body li {
+    list-style-position: inside;
+  }
+  body main p {
+    line-height: 1.5rem;
+  }
+  body .activeTab {
+    background: var(--accent-color);
+  }
+  body .activeTab a {
+    color: var(--primary-color);
+  }
+  body img {
+    display: block;
+    max-width: 100%;
+  }
+  body footer {
+    width: 100vw;
+    font-size: 1rem;
+    text-align: center;
+    bottom: 0;
+    position: static;
+    background: var(--dark-color);
+    color: var(--primary-color);
+  }
 }
 /*# sourceMappingURL=style.css.map */
