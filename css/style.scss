@@ -5,41 +5,44 @@
   --dark-color: #6e2c91;
 }
 
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   background: var(--primary-color);
 
-  .bannerContainer {
+  .banner-container {
     background: var(--dark-color);
+
     .banner {
       padding-left: 5px;
       display: flex;
-      .logo {
-        max-height: 150px;
-        align-items: center;
-        max-width: 100%;
-        justify-content: center;
+
+      .img-div {
+        flex: 1 0 auto;
       }
+
       .compName {
         text-align: center;
         font-family: "Abril Fatface", "times new roman";
         padding-left: 100px;
-        font-size: 6vw;
-        flex: 0 0 70%;
+        font-size: 64px;
+        flex: 3 3 auto;
         letter-spacing: 15px;
         line-height: -0.3em;
       }
     }
 
-    #slogan {
+    .slogan {
       font-family: "Pinyon Script", "times new roman";
       align-self: center;
       padding-left: 600px;
-      font-size: 3vw;
+      font-size: 3rem;
       line-height: -0.3em;
     }
   }
@@ -77,11 +80,6 @@ body {
   li {
     list-style-position: inside;
   }
-  ul,
-  ol {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
 
   main {
     padding: 0 20%;
@@ -108,46 +106,92 @@ body {
     font-size: 1.5rem;
     text-align: center;
     bottom: 0;
-    //position: fixed;
+    position: fixed;
     background: var(--dark-color);
     color: var(--primary-color);
   }
 }
-@media screen and (max-width: 300px) {
-  * {
-    font-size: 1rem;
-  }
-  body {
-    width: 100%;
-  }
-  p {
-    line-height: -0.1em;
-  }
-  footer {
-    font-size: 1rem;
-  }
-  .bannerContainer {
-    .banner {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
 
-      .compName {
-        font-size: 1rem;
-        font-family: sans-serif;
+@media (max-width: 850px) {
+  body {
+    font-size: 1rem;
+
+    .banner-container {
+      .banner {
         padding: 0;
-        align-content: center;
+        flex-direction: column;
+        //flex-wrap: wrap;
+        .compName {
+          text-align: left;
+          padding: 0;
+          font-size: 2rem;
+          flex: 1 1 auto;
+          letter-spacing: 0;
+          line-height: auto;
+          //text-transform: lowercase;
+        }
       }
-      .logo {
-        max-width: 300px;
+      .slogan {
+        align-self: center;
+        padding: 0 5px;
+        text-align: left;
+        font-size: 1.3rem;
+        line-height: auto;
+        font-weight: 800;
       }
     }
-    #slogan {
+
+    nav {
+      padding: 5px 0;
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+      }
+      li {
+        border: 1px solid black;
+        margin: 0 10px;
+      }
+      a {
+        display: inline-block;
+        padding: 0;
+        text-decoration: none;
+        color: var(--dark-color);
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+
+    li {
+      list-style-position: inside;
+    }
+
+    main {
+      p {
+        line-height: 1.5rem;
+      }
+    }
+
+    .activeTab {
+      background: var(--accent-color);
+      a {
+        color: var(--primary-color);
+      }
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    footer {
+      width: 100vw;
       font-size: 1rem;
-      font-family: "Times New Roman", Times, serif;
-      padding: 0;
-      margin: 0;
-      left: 0;
+      text-align: center;
+      bottom: 0;
+      position: static;
+      background: var(--dark-color);
+      color: var(--primary-color);
     }
   }
 }
