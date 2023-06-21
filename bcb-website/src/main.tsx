@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-import Navbar from "./components/Navbar.tsx";
+import { RouterProvider } from "react-router-dom";
 import Footer from "./components/Footer.tsx";
+import "./index.css";
+import router from './router';
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Navbar />
-    <App />
+    <RouterProvider router={router}/>
     <Footer />
   </React.StrictMode>
 );

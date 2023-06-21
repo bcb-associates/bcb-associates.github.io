@@ -1,5 +1,5 @@
 import BcbLogo from "../assets/bcbLogo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -15,20 +15,28 @@ const Navbar = () => {
         <div className="ml-16 basis-1/3">
           <ul className="flex gap-x-2">
             <li>
-              <Link
-                to="/companies"
+              <NavLink
+                to="/home"
                 className="text-xl font-bold italic text-violet-500 hover:text-2xl hover:underline hover:transition-all"
               >
-                /companies
-              </Link>
+                /home
+              </NavLink>
             </li>
             <li>
-              <Link
-                to="/dashboard"
+              <NavLink
+                to="/about"
                 className="text-xl font-bold italic text-violet-500 hover:text-2xl hover:underline hover:transition-all"
               >
-                /dashboard
-              </Link>
+                /about
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className="text-xl font-bold italic text-violet-500 hover:text-2xl hover:underline hover:transition-all"
+              >
+                /contact
+              </NavLink>
             </li>
           </ul>
         </div>
