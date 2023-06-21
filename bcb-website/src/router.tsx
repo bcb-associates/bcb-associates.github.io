@@ -3,12 +3,15 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
+import { Container } from "@mui/material";
 
 const NavbarWrapper = () => {
   return (
     <div>
       <Navbar />
-      <Outlet />
+      <Container>
+        <Outlet />
+      </Container>
     </div>
   );
 };
