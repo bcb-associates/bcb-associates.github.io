@@ -1,9 +1,10 @@
-import { Outlet, createBrowserRouter } from "react-router-dom";
+import { Container } from "@mui/material";
+import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
-import { Container } from "@mui/material";
+import Home from "./views/Home";
+import Place from "./views/Place";
 
 const NavbarWrapper = () => {
   return (
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <Navigate to="/home" />,
       },
       {
         path: "/home",
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/place",
+        element: <Place />,
       },
     ],
   },

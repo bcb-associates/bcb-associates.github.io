@@ -3,7 +3,7 @@ import { MdMail } from "react-icons/md";
 import { Container } from "@mui/material";
 const Footer = () => {
   return (
-    <Container>
+    <Container sx={{ textAlign: "center", color: "InfoText" }}>
       <footer>
         <hr className="border-1 mt-5 border-gray-400" />
         <h3 className="text-center text-xl font-bold text-gray-500">
