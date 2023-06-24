@@ -5,13 +5,15 @@ import About from "./views/About";
 import Contact from "./views/Contact";
 import Home from "./views/Home";
 import Place from "./views/Place";
+import Footer from "./components/Footer";
 
 const NavbarWrapper = () => {
   return (
     <div>
-      <Navbar />
-      <Container>
+      <Container fixed maxWidth="xl">
+        <Navbar />
         <Outlet />
+        <Footer />
       </Container>
     </div>
   );
