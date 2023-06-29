@@ -14,7 +14,7 @@ import BcbLogo from "../assets/bcbLogo.png";
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
-    <Box sx={{ display: "flex", flexGrow: 1 }}>
+    <Box sx={{ display: "flex", flexGrow: 1, bgcolor: "rgba(33,39,191,.5)" }}>
       <IconButton
         size="large"
         edge="start"
@@ -24,7 +24,7 @@ const Navbar = () => {
       >
         <MenuIcon />
       </IconButton>
-      <Box position="sticky">
+      <Box>
         <IconButton size="large" edge="start">
           <img src={BcbLogo} alt="logo" />
         </IconButton>
