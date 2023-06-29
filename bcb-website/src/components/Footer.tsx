@@ -9,10 +9,8 @@ const Footer = () => {
         display: "flex",
         justifyContent: "center",
         textAlign: "center",
-        position: "sticky",
-        bottom: 0,
-        backgroundColor: "indigo",
         color: "white",
+        backgroundColor: "#2127bf",
       }}
     >
       <Typography variant="h6">Made by Arnab Shanta Anu</Typography>

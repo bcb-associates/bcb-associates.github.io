@@ -1,4 +1,4 @@
-import { Container,ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -6,18 +6,16 @@ import About from "./views/About";
 import Contact from "./views/Contact";
 import Home from "./views/Home";
 import Place from "./views/Place";
-import theme from './theme';
+import theme from "./theme";
 
 const NavbarWrapper = () => {
   return (
     <div>
-      <Container>
-        <ThemeProvider theme={theme}>
-          <Navbar />
-          <Outlet />
-          <Footer />
-        </ThemeProvider>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </ThemeProvider>
     </div>
   );
 };

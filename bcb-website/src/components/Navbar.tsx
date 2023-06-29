@@ -1,12 +1,10 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import {
-  AppBar,
   Box,
   Drawer,
   IconButton,
   List,
   ListItem,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import { useState } from "react";
@@ -16,14 +14,7 @@ import BcbLogo from "../assets/bcbLogo.png";
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
-    <Box sx={{ display: "flex", flexGrow: 1, flexDirection: "row-reverse" }}>
-      <AppBar position="sticky">
-        <Toolbar>
-          <IconButton size="large" edge="start">
-            <img src={BcbLogo} alt="logo" />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+    <Box sx={{ display: "flex", flexGrow: 1 }}>
       <IconButton
         size="large"
         edge="start"
@@ -33,6 +24,12 @@ const Navbar = () => {
       >
         <MenuIcon />
       </IconButton>
+      <Box position="sticky">
+        <IconButton size="large" edge="start">
+          <img src={BcbLogo} alt="logo" />
+        </IconButton>
+      </Box>
+
       <Drawer
         anchor="left"
         open={isDrawerOpen}
