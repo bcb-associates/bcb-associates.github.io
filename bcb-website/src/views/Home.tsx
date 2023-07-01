@@ -1,4 +1,13 @@
-import { Typography, Paper, Box, Button } from "@mui/material";
+import {
+  Typography,
+  Paper,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardActions,
+} from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import "../index.css";
 import { Background, Parallax } from "react-parallax";
 import BgImg from "../assets/Capture.png";
@@ -8,7 +17,7 @@ const Home = () => {
   return (
     <Paper elevation={24}>
       <main>
-        <Parallax strength={500}>
+        <Parallax strength={600}>
           <Background>
             <img
               src={BgImg}
@@ -53,13 +62,34 @@ const Home = () => {
                 Total VAT and Tax solution
               </Typography>
             </Box>
-            <Button size="large" variant="contained" sx={{ width: "20rem" }}>
+            <Button
+              size="large"
+              variant="contained"
+              sx={{ alignSelf: "start" }}
+              href="mailto:bcbassociate@gmail.com"
+              endIcon={<ArrowForwardIosIcon />}
+            >
               <Typography>
-                Free Consutation <ArrowForwardIosIcon />
+                <span>Free Consultation</span>
               </Typography>
             </Button>
           </Box>
         </Parallax>
+        <section>
+          <Grid container spacing={2}>
+            <Grid xs={6} lg={8}>
+              <Card variant="outlined" sx={{ border: "2px solid red" }}>
+                <CardContent>
+                  <Typography>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima, eligendi?
+                  </Typography>
+                </CardContent>
+                <CardActions></CardActions>
+              </Card>
+            </Grid>
+          </Grid>
+        </section>
       </main>
     </Paper>
   );
