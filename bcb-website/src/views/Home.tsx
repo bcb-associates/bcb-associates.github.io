@@ -3,15 +3,17 @@ import {
   Paper,
   Box,
   Button,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
   Card,
   CardContent,
-  CardActions,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
 import "../index.css";
 import { Background, Parallax } from "react-parallax";
 import BgImg from "../assets/Capture.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Home = () => {
   return (
@@ -27,7 +29,7 @@ const Home = () => {
                 height: "100vh",
                 position: "relative",
                 objectFit: "cover",
-                filter: "blur(2px)",
+                filter: "blur(5px)",
               }}
             />
             <Box
@@ -65,30 +67,99 @@ const Home = () => {
             <Button
               size="large"
               variant="contained"
-              sx={{ alignSelf: "start" }}
+              sx={{
+                alignSelf: "start",
+                bgcolor: "secondary.main",
+                color: "black",
+              }}
               href="mailto:bcbassociate@gmail.com"
               endIcon={<ArrowForwardIosIcon />}
             >
-              <Typography>
-                <span>Free Consultation</span>
-              </Typography>
+              <Typography>Free Consultation</Typography>
             </Button>
           </Box>
         </Parallax>
         <section>
-          <Grid container spacing={2}>
-            <Grid xs={6} lg={8}>
-              <Card variant="outlined" sx={{ border: "2px solid red" }}>
+          <Typography variant="h2" textAlign={"center"}>
+            Services we provide:{" "}
+          </Typography>
+          <Accordion
+            sx={{
+              mx: "20rem",
+            }}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography variant="h3">VAT Services</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              molestias.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{
+              mx: "20rem",
+            }}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography variant="h3">Tax Services</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              molestias.
+            </AccordionDetails>
+          </Accordion>
+        </section>
+        <section>
+          <Box
+            sx={{
+              display: "flex",
+            }}
+          >
+            <Box
+              sx={{
+                flex: 1,
+                textAlign: "center",
+              }}
+            >
+              <Card variant="outlined">
                 <CardContent>
-                  <Typography>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minima, eligendi?
+                  <Typography variant="h3">Our Mission</Typography>
+                  <Typography variant="body1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nobis iusto aut eaque earum optio distinctio consequuntur
+                    corrupti quidem veniam, voluptatum rem velit fugiat odio
+                    ipsum architecto id soluta commodi reprehenderit. Ipsam modi
+                    ipsum officiis vitae molestias quisquam non illo?
                   </Typography>
                 </CardContent>
-                <CardActions></CardActions>
               </Card>
-            </Grid>
-          </Grid>
+            </Box>
+            <Box
+              sx={{
+                flex: 1,
+                textAlign: "center",
+              }}
+            >
+              <Card variant="outlined">
+                <CardContent>
+                  <Typography variant="h3">Chairman's message</Typography>
+                  <Typography variant="body1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nobis iusto aut eaque earum optio distinctio consequuntur
+                    corrupti quidem veniam, voluptatum rem velit fugiat odio
+                    ipsum architecto id soluta commodi reprehenderit. Ipsam modi
+                    ipsum officiis vitae molestias quisquam non illo?
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          </Box>
+        </section>
+        <section>
+          <Typography variant="h2" textAlign={"center"}>
+            Reasons for choosing us:
+          </Typography>
         </section>
       </main>
     </Paper>
