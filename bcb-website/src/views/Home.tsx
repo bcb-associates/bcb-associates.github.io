@@ -55,12 +55,26 @@ const Home = () => {
           >
             <Box>
               <Typography
-                variant="h1"
-                sx={{ color: "white", fontWeight: "bold" }}
+                sx={{
+                  typography: {
+                    xs: "h2",
+                    md: "h1",
+                  },
+                  color: "white",
+                  fontWeight: "bold",
+                }}
               >
                 BCB Associates
               </Typography>
-              <Typography variant="h2" sx={{ color: "white" }}>
+              <Typography
+                sx={{
+                  typography: {
+                    xs: "h3",
+                    md: "h2",
+                  },
+                  color: "white",
+                }}
+              >
                 Total VAT and Tax solution
               </Typography>
             </Box>
@@ -75,21 +89,39 @@ const Home = () => {
               href="mailto:bcbassociate@gmail.com"
               endIcon={<ArrowForwardIosIcon />}
             >
-              <Typography>Free Consultation</Typography>
+              <Typography variant="button">Free Consultation</Typography>
             </Button>
           </Box>
         </Parallax>
         <section>
-          <Typography variant="h2" textAlign={"center"}>
-            Services we provide:{" "}
+          <Typography
+            sx={{
+              textAlign: "center",
+              typography: {
+                md: "h2",
+                xs: "h3",
+              },
+            }}
+          >
+            Services we provide:
           </Typography>
           <Accordion
             sx={{
-              mx: "20rem",
+              maxWidth: { md: "60%", xs: "100%" },
+              mx: "auto",
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="h3">VAT Services</Typography>
+              <Typography
+                sx={{
+                  typography: {
+                    md: "h3",
+                    xs: "h4",
+                  },
+                }}
+              >
+                VAT Services
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
@@ -98,11 +130,21 @@ const Home = () => {
           </Accordion>
           <Accordion
             sx={{
-              mx: "20rem",
+              maxWidth: { md: "60%", xs: "100%" },
+              mx: "auto",
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="h3">Tax Services</Typography>
+              <Typography
+                sx={{
+                  typography: {
+                    md: "h3",
+                    xs: "h4",
+                  },
+                }}
+              >
+                Tax Services
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
@@ -114,6 +156,7 @@ const Home = () => {
           <Box
             sx={{
               display: "flex",
+              flexDirection: { md: "row", xs: "column" },
             }}
           >
             <Box
@@ -124,7 +167,16 @@ const Home = () => {
             >
               <Card variant="outlined">
                 <CardContent>
-                  <Typography variant="h3">Our Mission</Typography>
+                  <Typography
+                    sx={{
+                      typography: {
+                        md: "h3",
+                        xs: "h4",
+                      },
+                    }}
+                  >
+                    Our Mission
+                  </Typography>
                   <Typography variant="body1">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Nobis iusto aut eaque earum optio distinctio consequuntur
@@ -143,7 +195,16 @@ const Home = () => {
             >
               <Card variant="outlined">
                 <CardContent>
-                  <Typography variant="h3">Chairman's message</Typography>
+                  <Typography
+                    sx={{
+                      typography: {
+                        md: "h3",
+                        xs: "h4",
+                      },
+                    }}
+                  >
+                    Chairman's message
+                  </Typography>
                   <Typography variant="body1">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Nobis iusto aut eaque earum optio distinctio consequuntur
@@ -157,7 +218,15 @@ const Home = () => {
           </Box>
         </section>
         <section>
-          <Typography variant="h2" textAlign={"center"}>
+          <Typography
+            sx={{
+              typography: {
+                md: "h2",
+                xs: "h3",
+              },
+              textAlign: "center",
+            }}
+          >
             Reasons for choosing us:
           </Typography>
         </section>
