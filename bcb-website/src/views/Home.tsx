@@ -1,19 +1,21 @@
-import {
-  Typography,
-  Paper,
-  Box,
-  Button,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Card,
-  CardContent,
-} from "@mui/material";
-import "../index.css";
-import { Background, Parallax } from "react-parallax";
-import BgImg from "../assets/Capture.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Avatar,
+  Paper,
+  Typography,
+} from "@mui/material";
+import { Background, Parallax } from "react-parallax";
+import BgImg from "../assets/Capture.png";
+import ChairmanImg from "../assets/bcbLogoTransparent.png";
+import "../index.css";
 
 const Home = () => {
   return (
@@ -105,53 +107,51 @@ const Home = () => {
           >
             Services we provide:
           </Typography>
-          <Accordion
+          <Box
             sx={{
               maxWidth: { md: "60%", xs: "100%" },
               mx: "auto",
             }}
           >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography
-                sx={{
-                  typography: {
-                    md: "h3",
-                    xs: "h4",
-                  },
-                }}
-              >
-                VAT Services
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              molestias.
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            sx={{
-              maxWidth: { md: "60%", xs: "100%" },
-              mx: "auto",
-            }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography
-                sx={{
-                  typography: {
-                    md: "h3",
-                    xs: "h4",
-                  },
-                }}
-              >
-                Tax Services
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              molestias.
-            </AccordionDetails>
-          </Accordion>
+            <Accordion>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography
+                  sx={{
+                    typography: {
+                      md: "h3",
+                      xs: "h4",
+                    },
+                  }}
+                >
+                  VAT Services
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                molestias.
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography
+                  sx={{
+                    typography: {
+                      md: "h3",
+                      xs: "h4",
+                    },
+                  }}
+                >
+                  Tax Services
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                molestias.
+              </AccordionDetails>
+            </Accordion>
+          </Box>
         </section>
+        <br />
         <section>
           <Box
             sx={{
@@ -165,7 +165,13 @@ const Home = () => {
                 textAlign: "center",
               }}
             >
-              <Card variant="outlined">
+              <Card
+                variant="outlined"
+                sx={{
+                  pt: "3.2rem",
+                  height: "100%",
+                }}
+              >
                 <CardContent>
                   <Typography
                     sx={{
@@ -193,7 +199,21 @@ const Home = () => {
                 textAlign: "center",
               }}
             >
-              <Card variant="outlined">
+              <Card
+                variant="outlined"
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Avatar
+                  src={ChairmanImg}
+                  sx={{
+                    height: "4.8rem",
+                    width: "4.8rem",
+                  }}
+                />
                 <CardContent>
                   <Typography
                     sx={{

@@ -9,12 +9,12 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import BcbLogo from "../assets/bcbLogo.png";
+import BcbLogo from "../assets/bcbLogoTransparent.png";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
-    <Box sx={{ display: "flex", flexGrow: 1}}>
+    <Box sx={{ display: "flex", flexGrow: 1 }}>
       <IconButton
         size="large"
         edge="start"
